@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 9635 | Cyber Rabbit-Pits Scouting Form-2024</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        fieldset {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            display: none;
+        }
+
+        #blocks-container {
+            padding-top: 20px; /* 设置每个块与下方内容的固定距离 */
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button,
+        input[type="button"],
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top:10px;
+        }
+
+        /* 显示第一个fieldset */
+        fieldset:first-of-type {
+            display: block;
+        }
+        button:hover,
+        input[type="button"]:hover,
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #container {
+            position: relative;
+        }
+          /* 自定义上传按钮样式 */
+          .custom-file-input {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #45a049;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* 隐藏原生上传按钮 */
+        input[type="file"] {
+            display: none;
+        }
+
+        /* 图片预览样式 */
+        #image-preview {
+            max-width: 200px;
+            max-height: 200px;
+            margin-top: 10px;
+            margin-right:10px;
+        }
+
+        /* 限制预览图片大小 */
+        #image-preview img {
+            max-width: 70px;
+            max-height: Auto;
+        }
+        .upload-container {
+            display: flex;
+        }
+
+        /* 为了在预览图和上传按钮之间添加一些间距 */
+        .upload-container > * {
+            margin-right: 10px;
+        }
+
+    </style>
+    <script>
+           console.log('初始化完成');
+    </script>
+
+</head>
+<body onload="init()">
+<!--主标题-->
+<h1>Team 9636 | Cyber Rabbit
+    <br>
+    2024 Pits Scouting Form</h1> 
+<!-- 1. Your Name -->
+<div id="block1" class=":current-block">
+    <fieldset>
+        <label for="Yourname">Q1: Your Name</label>
+        <br>
+        <select id="Yourname" onchange="p1()">
+            <option value="N/A">---Choose One---</option>
+            <option value="Howard">Howard</option>
+            <option value="Steven">Steven</option>
+            <option value="Martin">Martin</option>
+            <option value="Alice">Alice</option>
+            <option value="Richard">Richard</option>
+            <option value="Harry">Harry</option>
+            <option value="Ryan">Ryan</option>
+            <option value="Grace">Grace</option>
+            <option value="Leo">Leo</option>
+            <option value="Ethan">Ethan</option>
+            <option value="Mike">Mike</option>
+            <option value="Frankie">Frankie</option>
+            <option value="Liam">Liam</option>
+            <option value="Kristy">Kristy</option>
+            <option value="Mandy">Mandy</option>
+            <option value="Andrew">Andrew</option>
+            <option value="Thomas">Thomas</option>
+            <option value="Eric">Eric</option>
+        </select>
+        <br>
+        <script>
+            function p1() {
+                const selectedthing = document.getElementById('Yourname').value;
+                console.log("User change the result of Question 1:", selectedthing);
+            }
+        </script>
+        <!-- 2. Team Number -->
+        <label for="Teamnumber">Q2: Team Number</label>
+        <br>
+        <input type="number" id="Teamnumber" name="numericValue4" onchange="p2()">
+        <button onclick="incrementNumericValue4()">+</button>
+        <button onclick="decrementNumericValue4()">-</button>
+        <script>
+            function p2() {
+                const selectedthing = document.getElementById('Teamnumber').value;
+                console.log("User change the result of Question 2:", selectedthing);
+            }
+        </script>
+        <script>
+            // 数字加减功能的JavaScript代码
+            let numericValue4 = 0;
+
+            function incrementNumericValue4() {
+                numericValue4++;
+                document.getElementById("Teamnumber").value = numericValue4;
+            }
+
+            function decrementNumericValue4() {
+                numericValue4--;
+                document.getElementById("Teamnumber").value = numericValue4;
+            }
+        </script>
+        <br>
+        <button onclick="nextBlock()">Next</button>
+    </fieldset>
+    <br>
+</div>
+
+<!-- 3. Robot length -->
+<div id="block2">
+    <fieldset>
+        <label for="Robotlength">Q3: Robot Length</label>
+        <br>
+        <input type="number" id="Robotlength" name="Robotlength" value="0" onchange="p3()">
+        <button onclick="incrementNumericValue5()">+</button>
+        <button onclick="decrementNumericValue5()">-</button>
+        <script>
+            function p3() {
+                const selectedthing = document.getElementById('Robotlength').value;
+                console.log("User change the result of Question 3:", selectedthing);
+            }
+        </script>
+        <script>
+
+            function incrementNumericValue5() {
+                Robotlength++;
+            }
+            function decrementNumericValue5() {
+                Robotlength--;
+            }
+
+            function updateNumericValue5() {
+                // 每次调用时获取最新的输入框值
+                Robotlength = parseInt(document.getElementById("Robotlength").value) || 0;
+                // 更新数字框的值
+                document.getElementById("Robotlength").value = Robotlength;
+            }
+        </script>
+        <br>
+
+        <!-- 4. Robot Width -->
+        <label for="RobotWidth">Q4: Robot Width</label>
+        <br>
+        <input type="number" id="Robotwidth" name="numericValue6" onchange="p4()">
+        <button onclick="incrementNumericValue6()">+</button>
+        <button onclick="decrementNumericValue6()">-</button>
+        <script>
+            function p4() {
+                const selectedthing = document.getElementById('Robotwidth').value;
+                console.log("User change the result of Question 4:", selectedthing);
+            }
+        </script>
+        <script>
+            // 数字加减功能的JavaScript代码
+            let numericValue6 = 0;
+
+            function incrementNumericValue6() {
+                numericValue6++;
+                document.getElementById("numericValue6").value = numericValue6;
+            }
+
+            function decrementNumericValue6() {
+                numericValue6--;
+                document.getElementById("numericValue6").value = numericValue6;
+            }
+        </script>
+        <br>
+
+        <!-- 5. Robot Height -->
+        <label for="RobotHeight">Q5: Robot Height</label>
+        <br>
+        <input type="number" id="Robotheight" name="numericValue7" onchange="p5()">
+        <button onclick="incrementNumericValue7()">+</button>
+        <button onclick="decrementNumericValue7()">-</button>
+        <script>
+            function p5() {
+                const selectedthing = document.getElementById('Robotheight').value;
+                console.log("User change the result of Question 5:", selectedthing);
+            }
+        </script>
+        <script>
+            // 数字加减功能的JavaScript代码
+            let numericValue7 = 0;
+
+            function incrementNumericValue7() {
+                numericValue7++;
+                document.getElementById("numericValue7").value = numericValue7;
+            }
+
+            function decrementNumericValue7() {
+                numericValue7--;
+                document.getElementById("numericValue7").value = numericValue7;
+            }
+        </script>
+        <br>
+
+        <!-- 6. Robot Weight -->
+        <label for="Robotweight">Q6: Robot Weight</label>
+        <br>
+        <input type="number" id=Robotweight name="numericValue8" onchange="p6()">
+        <button onclick="incrementNumericValue8()">+</button>
+        <button onclick="decrementNumericValue8()">-</button>
+        <script>
+            function p6() {
+                const selectedthing = document.getElementById('Robotweight').value;
+                console.log("User change the result of Question 6:", selectedthing);
+            }
+        </script>
+        <script>
+            // 数字加减功能的JavaScript代码
+            let numericValue8 = 0;
+
+            function incrementNumericValue8() {
+                numericValue8++;
+                document.getElementById("numericValue8").value = numericValue8;
+            }
+
+            function decrementNumericValue8() {
+                numericValue8--;
+                document.getElementById("numericValue8").value = numericValue8;
+            }
+        </script>
+        <br>
+        <!-- 7. Robot Image -->
+        <label for="Robotimage">Q7: Robot Image</label>
+        <br><br>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- 将上传按钮和文件输入字段放在同一行 -->
+            <div class="upload-container">
+                <label for="image-upload" class="custom-file-input">选择图片</label>
+                <input id="image-upload" type="file" name="image" accept="image/*" onchange="previewImage(event)">
+            </div>
+        </form>
+    
+        <!-- 图片预览区域 -->
+        <div id="image-preview"></div>
+    
+        <script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var imagePreview = document.getElementById('image-preview');
+                imagePreview.innerHTML = '<img src="' + reader.result + '" alt="预览图">';
+                var uploadButton = document.querySelector('.custom-file-input');
+                    uploadButton.style.display = 'none'; // 隐藏选择图片按钮
+        }
+        reader.readAsDataURL(event.target.files[0]);
+        console.log("User add a image of Question 7");
+    }
+        </script>
+        <br>
+        <button onclick="prevBlock()">Prve</button>
+        <button onclick="nextBlock()">Next</button>
+        </fieldset>
+    </div>
+    <br>
+
+<!-- 8. Chassis -->
+<div id="block3">
+    <fieldset>
+        <label for="Chassis">Q8: Chassis/Driver Train</label>
+        <br>
+        <input type="radio" id="01option1" name="01options" value="Swerve" onchange="p8(this)">
+        <label for="01option1">Swerve</label>
+        <input type="radio" id="01option2" name="01options" value="West Coast" onchange="p8(this)">
+        <label for="01option2">West Coast</label>
+        <input type="radio" id="01option3" name="01options" value="Butterfly"onchange="p8(this)">
+        <label for="01option3">Butterfly</label>
+        <input type="radio" id="01option4" name="01options" value="Mecanum"onchange="p8(this)">
+        <label for="01option4">Mecanum</label>
+        <input type="radio" id="01option5" name="01options" value="FRC Chassis"onchange="p8(this)">
+        <label for="01option5">FRC Chassis</label>
+        <br>
+        <br>
+        <script>
+            function p8(selectedOption) {
+            console.log("User change the result of Question 8:", selectedOption.value);
+    }
+        </script>
+        <!-- 9. Motor Type -->
+                <label for="Motortype">Q9: Motor Type</label>
+                <br>
+                <input type="checkbox" id="02option1" name="02options" value="Neo" onchange="p9(this)">
+                <label for="02option1">Neo</label>
+                <input type="checkbox" id="02option2" name="02options" value="Kraken" onchange="p9(this)">
+                <label for="02option2">Kraken</label>
+                <input type="checkbox" id="02option3" name="02options" value="Falcon" onchange="p9(this)">
+                <label for="02option3">Falcon</label>
+                <input type="checkbox" id="02option4" name="02options" value="Cim" onchange="p9(this)">
+                <label for="02option4">Cim</label>
+                <input type="checkbox" id="02option5" name="02options" value="Other" onchange="p9(this)">
+                <label for="02option5">Other</label>
+    
+        
+        <script>
+            function p9(selectedCheckbox) {
+                if (selectedCheckbox.checked) {
+                    console.log("User selected a option of Question 9:", selectedCheckbox.value);
+                } else {
+                    console.log("User deselected a option of Question 9:", selectedCheckbox.value);
+                }
+            }
+            </script>
+        <br>
+        <br>
+        <button onclick="prevBlock()">Prev</button>
+        <button onclick="nextBlock()">Next</button>
+    </fieldset>
+</div>
+<br>
+
+<!-- 10. Program code -->
+<div id="block4">
+    <fieldset>
+        <label for="Programcode">Q10: Program Code</label>
+        <br>
+        <input type="radio" id="03option1" name="03options" value="Java" onchange="p10(this)">
+        <label for="03option1">Java</label>
+        <input type="radio" id="03option2" name="03options" value="Python"onchange="p10(this)">
+        <label for="03option2">Python</label>
+        <input type="radio" id="03option3" name="03options" value="C++"onchange="p10(this)">
+        <label for="03option3">C++</label>
+        <input type="radio" id="03option4" name="03options" value="Other"onchange="p10(this)">
+        <label for="03option4">Other</label>
+        <br>
+        <br>
+                
+        <script>
+                 function p10(selectedOption) {
+            console.log("User change the result of Question 10:", selectedOption.value);
+    }
+            </script>
+        <button onclick="prevBlock()">Prev</button>
+        <button onclick="nextBlock()">Next</button>
+    </fieldset>
+</div>
+<br>
+
+<!-- 11. Human Player Throw High Note Number -->
+<div id="block5">
+    <fieldset>
+        <label for="Humanplayer">Q11: Human Player Throw High Note Number</label>
+        <br>
+        <input type="number" id="Humanplayer" name="numericValue1" onchange="p11()">
+        <button onclick="incrementNumericValue1()">+</button>
+        <button onclick="decrementNumericValue1()">-</button>
+        <script>
+            function p11() {
+                const selectedthing = document.getElementById('Humanplayer').value;
+                console.log("User change the result of Question 11:", selectedthing);
+            }
+        </script>
+        <script>
+            // 数字加减功能的JavaScript代码
+            let numericValue1 = 0;
+
+            function incrementNumericValue1() {
+                numericValue1++;
+                document.getElementById("numericValue1").value = numericValue1;
+            }
+
+            function decrementNumericValue1() {
+                numericValue1--;
+                document.getElementById("numericValue1").value = numericValue1;
+            }
+        </script>
+        <br>
+        <button onclick="prevBlock()">Prev</button>
+        <button onclick="nextBlock()">Next</button>
+    </fieldset>
+</div>
+<br>
+
+<!-- 12. Leaving -->
+<div id="block6">
+    <fieldset>
+        <label for="Leaving">Q12: Leaving</label>
+        <br>
+        <input type="radio" id="04option1" name="04options" value="Yes" onchange="p12(this)">
+        <label for="04option1">Yes</label>
+        <input type="radio" id="04option2" name="04options" value="No" onchange="p12(this)">
+        <label for="04option2">No</label>
+        <br>
+        <br>
+        <script>
+            function p12(selectedOption) {
+            console.log("User change the result of Question 12:", selectedOption.value);
+    }
+        </script>
+
+        <!-- 13. Auto AMP -->
+        <label for="Autoamp">Q13: Auto AMP</label>
+        <br>
+        <input type="number" id="Autoamp" name="numericValue2" onchange="p13()">
+        <button onclick="incrementNumericValue2()">+</button>
+        <button onclick="decrementNumericValue2()">-</button>
+        <script>
+            function p13() {
+                const selectedthing = document.getElementById('Autoamp').value;
+                console.log("User change the result of Question 13:", selectedthing);
+            }
+        </script>
+        <script>
+            // 数字加减功能的JavaScript代码
+            let numericValue2 = 0;
+
+            function incrementNumericValue2() {
+                numericValue2++;
+                document.getElementById("numericValue2").value = numericValue2;
+            }
+
+            function decrementNumericValue2() {
+                numericValue2--;
+                document.getElementById("numericValue2").value = numericValue2;
+            }
+        </script>
+        <br>
+
+        <!-- 14. Auto Speaker -->
+        <label for="Autospeaker">Q14: Auto Speaker</label>
+        <br>
+        <input type="number" id="Autospeaker" name="numericValue9" onchange="p14()">
+        <button onclick="incrementNumericValue9()">+</button>
+        <button onclick="decrementNumericValue9()">-</button>
+        <script>
+            function p14() {
+                const selectedthing = document.getElementById('Autospeaker').value;
+                console.log("User change the result of Question 14:", selectedthing);
+            }
+        </script>
+        <script>
+            // 数字加减功能的JavaScript代码
+            let numericValue9 = 0;
+
+            function incrementNumericValue9() {
+                numericValue9++;
+                document.getElementById("numericValue9").value = numericValue9;
+            }
+
+            function decrementNumericValue9() {
+                numericValue9--;
+                document.getElementById("numericValue9").value = numericValue9;
+            }
+        </script>
+        <br>
+        <button onclick="prevBlock()">Prev</button>
+        <button onclick="nextBlock()">Next</button>
+    </fieldset>
+</div>
+<br>
+
+<!-- 15. AMP probability -->
+<div id="block7">
+    <fieldset>
+        <label for="Amp">Q15: AMP Probability</label>
+        <br>
+        <input type="radio" id="05option1" name="05options" value="Very Low" onchange="p15(this)">
+        <label for="05option1">Very Low</label>
+        <input type="radio" id="05option2" name="05options" value="Low" onchange="p15(this)">
+        <label for="05option2">Low</label>
+        <input type="radio" id="05option3" name="05options" value="Medium" onchange="p15(this)">
+        <label for="05option3">Medium</label>
+        <input type="radio" id="05option4" name="05options" value="High" onchange="p15(this)">
+        <label for="05option4">High</label>
+        <input type="radio" id="05option5" name="05options" value="Very High" onchange="p15(this)">
+        <label for="05option5">Very High</label>
+        <input type="radio" id="05option6" name="05options" value="N/A" onchange="p15(this)">
+        <label for="05option6">N/A</label>
+        <br>
+        <br>
+        <script>
+            function p15(selectedOption) {
+            console.log("User change the result of Question 15:", selectedOption.value);
+    }
+        </script>
+
+        <!-- 16. Speaker probability -->
+        <label for="Speaker">Q16: Speaker Probability</label>
+        <br>
+        <input type="radio" id="06option1" name="06options" value="Very Low" onchange="p16(this)">
+        <label for="06option1">Very Low</label>
+        <input type="radio" id="06option2" name="06options" value="Low"onchange="p16(this)">
+        <label for="06option2">Low</label>
+        <input type="radio" id="06option3" name="06options" value="Medium" onchange="p16(this)">
+        <label for="06option3">Medium</label>
+        <input type="radio" id="06option4" name="06options" value="High" onchange="p16(this)">
+        <label for="06option4">High</label>
+        <input type="radio" id="06option5" name="06options" value="Very High" onchange="p16(this)">
+        <label for="06option5">Very High</label>
+        <input type="radio" id="06option6" name="06options" value="N/A" onchange="p16(this)">
+        <label for="06option6">N/A</label>
+        <br>
+        <br>
+        <script>
+            function p16(selectedOption) {
+            console.log("User change the result of Question 16:", selectedOption.value);
+    }
+        </script>
+
+        <!-- 17. Trap probability -->
+        <label for="Trap">Q17: Trap Probability</label>
+        <br>
+        <input type="radio" id="07option1" name="07options" value="Very Low" onchange="p17(this)">
+        <label for="07option1">Very Low</label>
+        <input type="radio" id="07option2" name="07options" value="Low" onchange="p17(this)">
+        <label for="07option2">Low</label>
+        <input type="radio" id="07option3" name="07options" value="Medium" onchange="p17(this)">
+        <label for="07option3">Medium</label>
+        <input type="radio" id="07option4" name="07options" value="High" onchange="p17(this)">
+        <label for="07option4">High</label>
+        <input type="radio" id="07option5" name="07options" value="Very High" onchange="p17(this)">
+        <label for="07option5">Very High</label>
+        <input type="radio" id="07option6" name="07options" value="N/A" onchange="p17(this)">
+        <label for="07option6">N/A</label>
+        <br>
+        <br>
+        <script>
+            function p17(selectedOption) {
+            console.log("User change the result of Question 17:", selectedOption.value);
+    }
+        </script>
+        <button onclick="prevBlock()">Prev</button>
+        <button onclick="nextBlock()">Next</button>
+    </fieldset>
+</div>
+<br>
+
+<!-- 18. Robot and Driver good at -->
+<div id="block8">
+    <fieldset>
+        <label for="Goodat">Q18: Robot And Driver Good At</label>
+        <br>
+        <input type="checkbox" id="08option1" name="08options" value="Offence" onchange="p18(this)">
+        <label for="08option1">Offence</label>
+        <input type="checkbox" id="08option2" name="08options" value="Defence" onchange="p18(this)">
+        <label for="08option2">Defence</label>
+        <br>
+        <br>
+        <script>
+            function p18(selectedCheckbox) {
+                if (selectedCheckbox.checked) {
+                    console.log("User selected a option of Question 18:", selectedCheckbox.value);
+                } else {
+                    console.log("User deselected a option of Question 18:", selectedCheckbox.value);
+                }
+            }
+            </script>
+        <button onclick="prevBlock()">Prev</button>
+        <button onclick="nextBlock()">Next</button>
+    </fieldset>
+</div>
+
+<!-- 19. CAN issues before -->
+<div id="block9">
+    <fieldset>
+        <label for="Canissues">Q19: CAN Issue Before</label>
+        <br>
+        <input type="radio" id="09option1" name="09options" value="Yes" onchange="p19(this)">
+        <label for="09option1">Yes</label>
+        <input type="radio" id="09option2" name="09options" value="No" onchange="p19(this)">
+        <label for="09option2">No</label>
+        <br>
+        <br>
+        <script>
+            function p19(selectedOption) {
+            console.log("User change the result of Question 19:", selectedOption.value);
+    }
+        </script>
+        <button onclick="prevBlock()">Prev</button>
+        <button onclick="nextBlock()">Next</button>
+    </fieldset>
+</div>
+<style>
+    .text-input-container {
+        margin-top: 20px;
+    }
+
+    .text-input-label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #longTextInput {
+        width: 700px;
+        min-height: 50px;
+        height: 150px; /* 设置输入框的高度 */
+        padding: 5px;
+        box-sizing: border-box;
+        resize: vertical;
+    }
+</style>
+
+<!-- 20. Remark -->
+<div id="block10">
+    <fieldset class="text-input-container">
+        <label for="Remark" class="text-input-label">Q20: Remark</label>
+        <textarea id="Remark" name="longTextInput" placeholder="If there is any Remark, please write down in ENGLISH, no CHINESE can be reading!" onchange="p20()"></textarea>
+        <br>
+        <button onclick="prevBlock()">Prev</button>
+        <button onclick="generateQRCode()">QR Code (Cannot use)</button>
+        <button onclick="copyTestText()">Copy</button>
+    </fieldset>
+</div>
+<script>
+    function p20() {
+        const inputText = document.getElementById('Remark').value;
+        console.log("User change the result of Question 20:", inputText.value);
+    }
+</script>
+<div id="qrcode"></div>
+<script src="https://cdn.jsdelivr.net/npm/pako/dist/pako.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/arale-qrcode"></script>
+<script type="text/javascript">
+    function generateQRCode() {
+        // 获取问卷结果
+        const result = getQuestionnaireResult();
+        console.log(result);
+
+        // 将用户填写的数据部分转换成字符串
+        const userAnswersString = JSON.stringify(result);
+
+        // 打印用户填写的数据到控制台
+        console.log(userAnswersString);
+
+        // 压缩数据并转换为Base64字符串
+        const compressedData = pako.deflate(userAnswersString, { level: 1 });
+        const compressedDataUint8 = new Uint8Array(compressedData);
+
+        let binaryString = '';
+        for (let i = 0; i < compressedDataUint8.length; i++) {
+            binaryString += String.fromCharCode(compressedDataUint8[i]);
+        }
+        const compressedBase64 = btoa(binaryString);
+
+        // 创建二维码实例
+        var qrcode = new Qrcode(document.getElementById("qrcode"), {
+            text: compressedBase64,
+            width: 128,
+            height: 128,
+            correctLevel: Qrcode.CorrectLevel.L,
+        });
+    }
+function getQuestionnaireResult() {
+    const result = {};
+
+    // Your Name (下拉菜单)
+    result.cy001 = document.getElementById('Yourname').value;
+
+    // Team Number (填写数字)
+    result.cy002=document.getElementById('Teamnumber').value;
+
+    // Robot Length (填写数字)
+    result.cy003 = parseInt(document.getElementById('Robotlength').value);
+
+    // Robot Width (填写数字)
+    result.cy004 = parseInt(document.getElementById('Robotwidth').value);
+
+    // Robot Height (填写数字)
+    result.cy005 = parseInt(document.getElementById('Robotheight').value);
+
+    // Robot Weight (填写数字)
+    result.cy006 = parseInt(document.getElementById('Robotweight').value);
+
+    // Robot Image (上传图片)
+    //const imagePreview = document.getElementById('image-preview');
+    //if (imagePreview.innerHTML !== '') {
+    //    result.robotImage = imagePreview.querySelector('img').src;
+   // }
+
+    // Chassis/Driver Train (单选)
+    const chassisOptions = document.getElementsByName('01options');
+    for (let i = 0; i < chassisOptions.length; i++) {
+        if (chassisOptions[i].checked) {
+            result.cy008 = chassisOptions[i].value;
+            break;
+        }
+    }
+
+    // Motor Type (多选)
+    const motorOptions = document.getElementsByName('02options');
+    result.motorTypes = [];
+    for (let i = 0; i < motorOptions.length; i++) {
+        if (motorOptions[i].checked) {
+            result.cy009.push(motorOptions[i].value);
+        }
+    }
+
+    // Program Code (单选)
+    const programCodeOptions = document.getElementsByName('03options');
+    for (let i = 0; i < programCodeOptions.length; i++) {
+        if (programCodeOptions[i].checked) {
+            result.cy010 = programCodeOptions[i].value;
+            break;
+        }
+    }
+
+    // Human Player Throw High Note Number (填写数字)
+    result.highNoteNumber = parseInt(document.getElementById('Humanplayer').value);
+
+    // Leaving (单选)
+    const leavingOptions = document.getElementsByName('04options');
+    for (let i = 0; i < leavingOptions.length; i++) {
+        if (leavingOptions[i].checked) {
+            result.cy011 = leavingOptions[i].value;
+            break;
+        }
+    }
+
+    // Auto AMP (填写数字)
+    result.cy012 = parseInt(document.getElementById('Autoamp').value);
+
+    // Auto Speaker (填写数字)
+    result.cy013 = parseInt(document.getElementById('Autospeaker').value);
+
+    // AMP Probability (单选)
+    const ampProbabilityOptions = document.getElementsByName('05options');
+    for (let i = 0; i < ampProbabilityOptions.length; i++) {
+        if (ampProbabilityOptions[i].checked) {
+            result.cy014 = ampProbabilityOptions[i].value;
+            break;
+        }
+    }
+
+    // Speaker Probability (单选)
+    const speakerProbabilityOptions = document.getElementsByName('06options');
+    for (let i = 0; i < speakerProbabilityOptions.length; i++) {
+        if (speakerProbabilityOptions[i].checked) {
+            result.cy015 = speakerProbabilityOptions[i].value;
+            break;
+        }
+    }
+
+    // Trap Probability (单选)
+    const trapProbabilityOptions = document.getElementsByName('07options');
+    for (let i = 0; i < trapProbabilityOptions.length; i++) {
+        if (trapProbabilityOptions[i].checked) {
+            result.cy016 = trapProbabilityOptions[i].value;
+            break;
+        }
+    }
+
+    // Robot and Driver Good At (多选)
+    const goodAtOptions = document.getElementsByName('08options');
+    result.goodAt = [];
+    for (let i = 0; i < goodAtOptions.length; i++) {
+        if (goodAtOptions[i].checked) {
+            result.goodat.push(goodAtOptions[i].value);
+        }
+    }
+
+    // CAN Issues Before (单选)
+    const canIssuesOptions = document.getElementsByName('09options');
+    for (let i = 0; i < canIssuesOptions.length; i++) {
+        if (canIssuesOptions[i].checked) {
+            result.cy018 = canIssuesOptions[i].value;
+            break;
+        }
+    }
+
+    // Remark (填写文本)
+    result.cy019 = document.getElementById('Remark').value;
+
+    return result;
+}
+function copyToClipboard(text) {
+  const input = document.createElement('textarea');
+  input.innerHTML = text;
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand('copy');
+  document.body.removeChild(input);
+}
+
+function copyTestText() {
+  const user = getQuestionnaireResult();
+  const text = JSON.stringify(user);
+  copyToClipboard(text);
+  alert("复制的文本来自getQuestionnaireResult！");
+}
+    </script>
+<script>
+    let currentBlock = 1;
+
+    function init() {
+        // 初始化时，隐藏除第一个块外的其他块
+        for (let i = 2; i <= 10; i++) {
+            document.getElementById('block' + i).style.display = 'none';
+        }
+    }
+
+    function nextBlock() {
+        // 隐藏当前块
+        document.getElementById('block' + currentBlock).style.display = 'none';
+
+        // 显示下一个块
+        currentBlock++;
+        document.getElementById('block' + currentBlock).style.display = 'block';
+    }
+
+    function prevBlock() {
+        if (currentBlock > 1) {
+            // 隐藏当前块
+            document.getElementById('block' + currentBlock).style.display = 'none';
+
+            // 显示上一个块
+            currentBlock--;
+            document.getElementById('block' + currentBlock).style.display = 'block';
+        }
+    }
+    </script>
+    <script>
+function submitData() {
+    console.log('SubmitData');
+    // 获取用户填写的数据
+    let formData = {
+        Name: document.getElementById('Yourname').value,
+        TeamNumber: document.getElementById('Teamnumber').value,
+        RobotLength: document.getElementById('Robotlength').value,
+        RobotHeight: document.getElementById('Robotheight').value,
+        RobotWeight: document.getElementById('Robotweight').value,
+        RobotWidth: document.getElementById('RobotWidth').value,
+        RobotImage: document.getElementById('Robotimage').value,
+        Chassis: document.querySelector('input[name="01options"]:checked').value,
+        MotorType: Array.from(document.querySelectorAll('input[name="02options"]:checked')).map(option => option.value).join(","),
+        ProgramCode: document.querySelector('input[name="03options"]:checked').value,
+        HumanPlayer: document.getElementById('numericValue1').value,
+        Leaving: document.querySelector('input[name="04options"]:checked').value,
+        AutoAmp: document.getElementById('numericValue2').value,
+        AutoSpeaker: document.getElementById('numericValue9').value,
+        Amp: document.querySelector('input[name="05options"]:checked').value,
+        Speaker: document.querySelector('input[name="06options"]:checked').value,
+        Trap: document.querySelector('input[name="07options"]:checked').value,
+        GoodAt: Array.from(document.querySelectorAll('input[name="08options"]:checked')).map(option => option.value).join(","),
+        CANIssues: document.querySelector('input[name="09options"]:checked').value,
+        Remark: document.getElementById('longTextInput').value,
+    };
+    console.log('Print fromData');
+    console.log(formData);
+    // 使用 GitHub API 创建一个新的 Issue
+    fetch('https://api.github.com/repos/hewen-wu/Team-9635-Cyber-Rabbit/issues', {
+        method: 'POST',
+        headers: {
+            'Authorization': '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',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            title: 'New Submission',
+            body: JSON.stringify(formData)
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Data submitted successfully!');
+        console.log(data);
+    })
+    .catch(error => {
+        alert('Error submitting data. Please try again.');
+        console.error(error);
+    });
+}
+function getElementValue(elementId) {
+    // 通过元素 ID 获取值，如果元素不存在或值为 null，则返回空字符串
+    let element = document.getElementById(elementId);
+    return element ? element.value : '';
+}
+</script>
+<div id="qrcode-container"></div>
+
+
+</script>
+</body>
+</html>
