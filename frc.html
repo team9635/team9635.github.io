@@ -23,10 +23,11 @@
             border-radius: 5px;
             background-color: #fff;
             display: none;
+            padding-top: 20px;
         }
 
         #blocks-container {
-            padding-top: 20px; /* 设置每个块与下方内容的固定距离 */
+            padding-bottom: 20px; /* 设置每个块与下方内容的固定距离 */
         }
 
         label {
@@ -157,9 +158,9 @@
         <!-- 2. Team Number -->
         <label for="Teamnumber">Q2: Team Number</label>
         <br>
-        <input type="number" id="Teamnumber" name="numericValue4" onchange="p2()">
-        <button onclick="incrementNumericValue4()">+</button>
-        <button onclick="decrementNumericValue4()">-</button>
+        <input type="number" id="Teamnumber" name="Teamnumber" value="0" onchange="p2()">
+        <button onclick="incrementTeamnumber()">+</button>
+        <button onclick="decrementTeamnumber()">-</button>
         <script>
             function p2() {
                 const selectedthing = document.getElementById('Teamnumber').value;
@@ -168,16 +169,16 @@
         </script>
         <script>
             // 数字加减功能的JavaScript代码
-            let numericValue4 = 0;
+            let Teamnumber = 0;
 
-            function incrementNumericValue4() {
-                numericValue4++;
-                document.getElementById("Teamnumber").value = numericValue4;
+            function incrementTeamnumber(){
+                Teamnumber++;
+                document.getElementById("Teamnumber").value = Teamnumber
             }
 
-            function decrementNumericValue4() {
-                numericValue4--;
-                document.getElementById("Teamnumber").value = numericValue4;
+            function decrementTeamnumber() {
+                Teamnumber--;
+                document.getElementById("Teamnumber").value = Teamnumber
             }
         </script>
         <br>
@@ -192,8 +193,8 @@
         <label for="Robotlength">Q3: Robot Length</label>
         <br>
         <input type="number" id="Robotlength" name="Robotlength" value="0" onchange="p3()">
-        <button onclick="incrementNumericValue5()">+</button>
-        <button onclick="decrementNumericValue5()">-</button>
+        <button onclick="incrementRobotlength()">+</button>
+        <button onclick="decrementRobotlength()">-</button>
         <script>
             function p3() {
                 const selectedthing = document.getElementById('Robotlength').value;
@@ -201,18 +202,13 @@
             }
         </script>
         <script>
-
-            function incrementNumericValue5() {
+        let Robotlength=0;
+            function incrementRobotlength() {
                 Robotlength++;
+                document.getElementById("Robotlength").value = Robotlength;
             }
-            function decrementNumericValue5() {
+            function decrementRobotlength() {
                 Robotlength--;
-            }
-
-            function updateNumericValue5() {
-                // 每次调用时获取最新的输入框值
-                Robotlength = parseInt(document.getElementById("Robotlength").value) || 0;
-                // 更新数字框的值
                 document.getElementById("Robotlength").value = Robotlength;
             }
         </script>
@@ -221,9 +217,9 @@
         <!-- 4. Robot Width -->
         <label for="RobotWidth">Q4: Robot Width</label>
         <br>
-        <input type="number" id="Robotwidth" name="numericValue6" onchange="p4()">
-        <button onclick="incrementNumericValue6()">+</button>
-        <button onclick="decrementNumericValue6()">-</button>
+        <input type="number" id="Robotwidth" name="Robotwidth" value="0" onchange="p4()">
+        <button onclick="incrementRobotwidth()">+</button>
+        <button onclick="decrementRobotwidth()">-</button>
         <script>
             function p4() {
                 const selectedthing = document.getElementById('Robotwidth').value;
@@ -232,16 +228,16 @@
         </script>
         <script>
             // 数字加减功能的JavaScript代码
-            let numericValue6 = 0;
+            let Robotwidth = 0;
 
-            function incrementNumericValue6() {
-                numericValue6++;
-                document.getElementById("numericValue6").value = numericValue6;
+            function incrementRobotwidth(){
+                Robotwidth++;
+                document.getElementById("Robotwidth").value = Robotwidth;
             }
 
-            function decrementNumericValue6() {
-                numericValue6--;
-                document.getElementById("numericValue6").value = numericValue6;
+            function decrementRobotwidth() {
+                Robotwidth--;
+                document.getElementById("Robotwidth").value = Robotwidth;
             }
         </script>
         <br>
@@ -249,9 +245,9 @@
         <!-- 5. Robot Height -->
         <label for="RobotHeight">Q5: Robot Height</label>
         <br>
-        <input type="number" id="Robotheight" name="numericValue7" onchange="p5()">
-        <button onclick="incrementNumericValue7()">+</button>
-        <button onclick="decrementNumericValue7()">-</button>
+        <input type="number" id="Robotheight" value="0" name="Robotheight" onchange="p5()">
+        <button onclick="incrementRobotheight()">+</button>
+        <button onclick="decrementRobotheight()">-</button>
         <script>
             function p5() {
                 const selectedthing = document.getElementById('Robotheight').value;
@@ -260,16 +256,16 @@
         </script>
         <script>
             // 数字加减功能的JavaScript代码
-            let numericValue7 = 0;
+            let Robotheight = 0;
 
-            function incrementNumericValue7() {
-                numericValue7++;
-                document.getElementById("numericValue7").value = numericValue7;
+            function incrementRobotheight() {
+                Robotheight++;
+                document.getElementById("Robotheight").value = Robotheight;
             }
 
-            function decrementNumericValue7() {
-                numericValue7--;
-                document.getElementById("numericValue7").value = numericValue7;
+            function decrementRobotheight() {
+                Robotheight--;
+                document.getElementById("Robotheight").value = Robotheight;
             }
         </script>
         <br>
@@ -277,9 +273,9 @@
         <!-- 6. Robot Weight -->
         <label for="Robotweight">Q6: Robot Weight</label>
         <br>
-        <input type="number" id=Robotweight name="numericValue8" onchange="p6()">
-        <button onclick="incrementNumericValue8()">+</button>
-        <button onclick="decrementNumericValue8()">-</button>
+        <input type="number" id="Robotweight" value="0" name="Robotweight" onchange="p6()">
+        <button onclick="incrementRobotweight()">+</button>
+        <button onclick="decrementRobotweight()">-</button>
         <script>
             function p6() {
                 const selectedthing = document.getElementById('Robotweight').value;
@@ -288,16 +284,16 @@
         </script>
         <script>
             // 数字加减功能的JavaScript代码
-            let numericValue8 = 0;
+            let Robotweight = 0;
 
-            function incrementNumericValue8() {
-                numericValue8++;
-                document.getElementById("numericValue8").value = numericValue8;
+            function incrementRobotweight() {
+                Robotweight++;
+                document.getElementById("Robotweight").value = Robotweight;
             }
 
-            function decrementNumericValue8() {
-                numericValue8--;
-                document.getElementById("numericValue8").value = numericValue8;
+            function decrementRobotweight() {
+                Robotweight--;
+                document.getElementById("Robotweight").value = Robotweight;
             }
         </script>
         <br>
@@ -316,17 +312,18 @@
         <div id="image-preview"></div>
     
         <script>
-    function previewImage(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var imagePreview = document.getElementById('image-preview');
-                imagePreview.innerHTML = '<img src="' + reader.result + '" alt="预览图">';
-                var uploadButton = document.querySelector('.custom-file-input');
-                    uploadButton.style.display = 'none'; // 隐藏选择图片按钮
-        }
-        reader.readAsDataURL(event.target.files[0]);
-        console.log("User add a image of Question 7");
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var imagePreview = document.getElementById('image-preview');
+        var imageUrl = reader.result;
+        imagePreview.innerHTML = '<img src="' + imageUrl + '" alt="预览图"><br><a href="' + imageUrl + '" target="_blank">查看图片</a>';
+        var uploadButton = document.querySelector('.custom-file-input');
+        uploadButton.style.display = 'none'; // 隐藏选择图片按钮
     }
+    reader.readAsDataURL(event.target.files[0]);
+    console.log("User add a image of Question 7");
+}
         </script>
         <br>
         <button onclick="prevBlock()">Prve</button>
@@ -421,9 +418,9 @@
     <fieldset>
         <label for="Humanplayer">Q11: Human Player Throw High Note Number</label>
         <br>
-        <input type="number" id="Humanplayer" name="numericValue1" onchange="p11()">
-        <button onclick="incrementNumericValue1()">+</button>
-        <button onclick="decrementNumericValue1()">-</button>
+        <input type="number" id="Humanplayer" name="Humanplayer" value="0" onchange="p11()">
+        <button onclick="incrementHumanplayer()">+</button>
+        <button onclick="decrementHumanplayer()">-</button>
         <script>
             function p11() {
                 const selectedthing = document.getElementById('Humanplayer').value;
@@ -432,16 +429,16 @@
         </script>
         <script>
             // 数字加减功能的JavaScript代码
-            let numericValue1 = 0;
+            let Humanplayer = 0;
 
-            function incrementNumericValue1() {
-                numericValue1++;
-                document.getElementById("numericValue1").value = numericValue1;
+            function incrementHumanplayer() {
+                Humanplayer++;
+                document.getElementById("Humanplayer").value = Humanplayer;
             }
 
-            function decrementNumericValue1() {
-                numericValue1--;
-                document.getElementById("numericValue1").value = numericValue1;
+            function decrementHumanplayer() {
+                Humanplayer--;
+                document.getElementById("Humanplayer").value = Humanplayer;
             }
         </script>
         <br>
@@ -471,9 +468,9 @@
         <!-- 13. Auto AMP -->
         <label for="Autoamp">Q13: Auto AMP</label>
         <br>
-        <input type="number" id="Autoamp" name="numericValue2" onchange="p13()">
-        <button onclick="incrementNumericValue2()">+</button>
-        <button onclick="decrementNumericValue2()">-</button>
+        <input type="number" id="Autoamp" value="0" name="Autoamp" onchange="p13()">
+        <button onclick="incrementAutoamp()">+</button>
+        <button onclick="decrementAutoamp()">-</button>
         <script>
             function p13() {
                 const selectedthing = document.getElementById('Autoamp').value;
@@ -482,16 +479,16 @@
         </script>
         <script>
             // 数字加减功能的JavaScript代码
-            let numericValue2 = 0;
+            let Autoamp=0;
 
-            function incrementNumericValue2() {
-                numericValue2++;
-                document.getElementById("numericValue2").value = numericValue2;
+            function incrementAutoamp() {
+                Autoamp++;
+                document.getElementById("Autoamp").value = Autoamp;
             }
 
-            function decrementNumericValue2() {
-                numericValue2--;
-                document.getElementById("numericValue2").value = numericValue2;
+            function decrementAutoamp() {
+                Autoamp--;
+                document.getElementById("Autoamp").value = Autoamp;
             }
         </script>
         <br>
@@ -499,9 +496,9 @@
         <!-- 14. Auto Speaker -->
         <label for="Autospeaker">Q14: Auto Speaker</label>
         <br>
-        <input type="number" id="Autospeaker" name="numericValue9" onchange="p14()">
-        <button onclick="incrementNumericValue9()">+</button>
-        <button onclick="decrementNumericValue9()">-</button>
+        <input type="number" id="Autospeaker" value="0" name="numericValue9" onchange="p14()">
+        <button onclick="incrementAutospeaker()">+</button>
+        <button onclick="decrementAutospeaker()">-</button>
         <script>
             function p14() {
                 const selectedthing = document.getElementById('Autospeaker').value;
@@ -510,16 +507,16 @@
         </script>
         <script>
             // 数字加减功能的JavaScript代码
-            let numericValue9 = 0;
+            let Autospeaker = 0;
 
-            function incrementNumericValue9() {
-                numericValue9++;
-                document.getElementById("numericValue9").value = numericValue9;
+            function incrementAutospeaker() {
+                Autospeaker++;
+                document.getElementById("Autospeaker").value = Autospeaker;
             }
 
-            function decrementNumericValue9() {
-                numericValue9--;
-                document.getElementById("numericValue9").value = numericValue9;
+            function decrementAutospeaker() {
+                Autospeaker--;
+                document.getElementById("Autospeaker").value = Autospeaker;
             }
         </script>
         <br>
@@ -674,7 +671,7 @@
 <div id="block10">
     <fieldset class="text-input-container">
         <label for="Remark" class="text-input-label">Q20: Remark</label>
-        <textarea id="Remark" name="longTextInput" placeholder="If there is any Remark, please write down in ENGLISH, no CHINESE can be reading!" onchange="p20()"></textarea>
+        <textarea id="Remark" name="longTextInput" placeholder="If there is any Remark, please write down!" onchange="p20()"></textarea>
         <br>
         <button onclick="prevBlock()">Prev</button>
         <button onclick="generateQRCode()">QR Code (Cannot use)</button>
@@ -689,7 +686,7 @@
 </script>
 <div id="qrcode"></div>
 <script src="https://cdn.jsdelivr.net/npm/pako/dist/pako.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/arale-qrcode"></script>
+<script src="https://cdn.jsdelivr.net/npm/arale-qrcode/dist/arale-qrcode.min.js"></script>
 <script type="text/javascript">
     function generateQRCode() {
         // 获取问卷结果
@@ -713,7 +710,7 @@
         const compressedBase64 = btoa(binaryString);
 
         // 创建二维码实例
-        var qrcode = new Qrcode(document.getElementById("qrcode"), {
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
             text: compressedBase64,
             width: 128,
             height: 128,
@@ -855,7 +852,7 @@ function copyTestText() {
   const user = getQuestionnaireResult();
   const text = JSON.stringify(user);
   copyToClipboard(text);
-  alert("复制的文本来自getQuestionnaireResult！");
+  alert("文本复制成功！");
 }
     </script>
 <script>
@@ -888,65 +885,5 @@ function copyTestText() {
         }
     }
     </script>
-    <script>
-function submitData() {
-    console.log('SubmitData');
-    // 获取用户填写的数据
-    let formData = {
-        Name: document.getElementById('Yourname').value,
-        TeamNumber: document.getElementById('Teamnumber').value,
-        RobotLength: document.getElementById('Robotlength').value,
-        RobotHeight: document.getElementById('Robotheight').value,
-        RobotWeight: document.getElementById('Robotweight').value,
-        RobotWidth: document.getElementById('RobotWidth').value,
-        RobotImage: document.getElementById('Robotimage').value,
-        Chassis: document.querySelector('input[name="01options"]:checked').value,
-        MotorType: Array.from(document.querySelectorAll('input[name="02options"]:checked')).map(option => option.value).join(","),
-        ProgramCode: document.querySelector('input[name="03options"]:checked').value,
-        HumanPlayer: document.getElementById('numericValue1').value,
-        Leaving: document.querySelector('input[name="04options"]:checked').value,
-        AutoAmp: document.getElementById('numericValue2').value,
-        AutoSpeaker: document.getElementById('numericValue9').value,
-        Amp: document.querySelector('input[name="05options"]:checked').value,
-        Speaker: document.querySelector('input[name="06options"]:checked').value,
-        Trap: document.querySelector('input[name="07options"]:checked').value,
-        GoodAt: Array.from(document.querySelectorAll('input[name="08options"]:checked')).map(option => option.value).join(","),
-        CANIssues: document.querySelector('input[name="09options"]:checked').value,
-        Remark: document.getElementById('longTextInput').value,
-    };
-    console.log('Print fromData');
-    console.log(formData);
-    // 使用 GitHub API 创建一个新的 Issue
-    fetch('https://api.github.com/repos/hewen-wu/Team-9635-Cyber-Rabbit/issues', {
-        method: 'POST',
-        headers: {
-            'Authorization': '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',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            title: 'New Submission',
-            body: JSON.stringify(formData)
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert('Data submitted successfully!');
-        console.log(data);
-    })
-    .catch(error => {
-        alert('Error submitting data. Please try again.');
-        console.error(error);
-    });
-}
-function getElementValue(elementId) {
-    // 通过元素 ID 获取值，如果元素不存在或值为 null，则返回空字符串
-    let element = document.getElementById(elementId);
-    return element ? element.value : '';
-}
-</script>
-<div id="qrcode-container"></div>
-
-
-</script>
 </body>
 </html>
