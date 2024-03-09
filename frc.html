@@ -724,22 +724,22 @@ function getQuestionnaireResult() {
     const result = {};
 
     // Your Name (下拉菜单)
-    result.cy001 = document.getElementById('Yourname').value;
+    result.name = document.getElementById('Yourname').value;
 
     // Team Number (填写数字)
-    result.cy002=document.getElementById('Teamnumber').value;
+    result.teamNumber=document.getElementById('Teamnumber').value;
 
     // Robot Length (填写数字)
-    result.cy003 = parseInt(document.getElementById('Robotlength').value);
+    result.robotLength = parseInt(document.getElementById('Robotlength').value);
 
     // Robot Width (填写数字)
-    result.cy004 = parseInt(document.getElementById('Robotwidth').value);
+    result.robotWidth = parseInt(document.getElementById('Robotwidth').value);
 
     // Robot Height (填写数字)
-    result.cy005 = parseInt(document.getElementById('Robotheight').value);
+    result.robotHeight = parseInt(document.getElementById('Robotheight').value);
 
     // Robot Weight (填写数字)
-    result.cy006 = parseInt(document.getElementById('Robotweight').value);
+    result.robotWeight = parseInt(document.getElementById('Robotweight').value);
 
     // Robot Image (上传图片)
     //const imagePreview = document.getElementById('image-preview');
@@ -751,7 +751,7 @@ function getQuestionnaireResult() {
     const chassisOptions = document.getElementsByName('01options');
     for (let i = 0; i < chassisOptions.length; i++) {
         if (chassisOptions[i].checked) {
-            result.cy008 = chassisOptions[i].value;
+            result.chassis = chassisOptions[i].value;
             break;
         }
     }
@@ -761,7 +761,7 @@ function getQuestionnaireResult() {
     result.motorTypes = [];
     for (let i = 0; i < motorOptions.length; i++) {
         if (motorOptions[i].checked) {
-            result.cy009.push(motorOptions[i].value);
+            result.motorTypes.push(motorOptions[i].value);
         }
     }
 
@@ -769,7 +769,7 @@ function getQuestionnaireResult() {
     const programCodeOptions = document.getElementsByName('03options');
     for (let i = 0; i < programCodeOptions.length; i++) {
         if (programCodeOptions[i].checked) {
-            result.cy010 = programCodeOptions[i].value;
+            result.programCode = programCodeOptions[i].value;
             break;
         }
     }
@@ -781,22 +781,22 @@ function getQuestionnaireResult() {
     const leavingOptions = document.getElementsByName('04options');
     for (let i = 0; i < leavingOptions.length; i++) {
         if (leavingOptions[i].checked) {
-            result.cy011 = leavingOptions[i].value;
+            result.leaving = leavingOptions[i].value;
             break;
         }
     }
 
     // Auto AMP (填写数字)
-    result.cy012 = parseInt(document.getElementById('Autoamp').value);
+    result.autoAmp = parseInt(document.getElementById('Autoamp').value);
 
     // Auto Speaker (填写数字)
-    result.cy013 = parseInt(document.getElementById('Autospeaker').value);
+    result.autoSpeaker = parseInt(document.getElementById('Autospeaker').value);
 
     // AMP Probability (单选)
     const ampProbabilityOptions = document.getElementsByName('05options');
     for (let i = 0; i < ampProbabilityOptions.length; i++) {
         if (ampProbabilityOptions[i].checked) {
-            result.cy014 = ampProbabilityOptions[i].value;
+            result.ampProbability = ampProbabilityOptions[i].value;
             break;
         }
     }
@@ -805,7 +805,7 @@ function getQuestionnaireResult() {
     const speakerProbabilityOptions = document.getElementsByName('06options');
     for (let i = 0; i < speakerProbabilityOptions.length; i++) {
         if (speakerProbabilityOptions[i].checked) {
-            result.cy015 = speakerProbabilityOptions[i].value;
+            result.speakerProbability = speakerProbabilityOptions[i].value;
             break;
         }
     }
@@ -814,7 +814,7 @@ function getQuestionnaireResult() {
     const trapProbabilityOptions = document.getElementsByName('07options');
     for (let i = 0; i < trapProbabilityOptions.length; i++) {
         if (trapProbabilityOptions[i].checked) {
-            result.cy016 = trapProbabilityOptions[i].value;
+            result.trapProbability = trapProbabilityOptions[i].value;
             break;
         }
     }
@@ -824,7 +824,7 @@ function getQuestionnaireResult() {
     result.goodAt = [];
     for (let i = 0; i < goodAtOptions.length; i++) {
         if (goodAtOptions[i].checked) {
-            result.goodat.push(goodAtOptions[i].value);
+            result.goodAt.push(goodAtOptions[i].value);
         }
     }
 
@@ -832,13 +832,13 @@ function getQuestionnaireResult() {
     const canIssuesOptions = document.getElementsByName('09options');
     for (let i = 0; i < canIssuesOptions.length; i++) {
         if (canIssuesOptions[i].checked) {
-            result.cy018 = canIssuesOptions[i].value;
+            result.canIssuesBefore = canIssuesOptions[i].value;
             break;
         }
     }
 
     // Remark (填写文本)
-    result.cy019 = document.getElementById('Remark').value;
+    result.remark = document.getElementById('Remark').value;
 
     return result;
 }
